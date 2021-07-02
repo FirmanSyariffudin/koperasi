@@ -38,30 +38,9 @@ class RentalController extends Controller
 
     public function index()
     {
-        // Auth Roles Rental   
-        if (
-            $this->FunctionController->onlyUserRental() == true ||
-            $this->FunctionController->onlyAdminRental() == true ||
-            $this->FunctionController->superAdmin() == true
-        ) {
-            if ($this->FunctionController->authUser() == true) {
                 return view('pages.data.rental.indexRental', [
-                    'rental' => $this->getData(1),
-                    'total' => $this->FunctionController->total('rental'),
-                    'dtotal' => $this->FunctionController->dtotal('rental')
+                    'rental' => Rental::all(),
                 ]);
-            } else {
-                return view('pages.data.rental.indexRental', [
-                    'rental' => $this->getData(1),
-                    'total' => $this->FunctionController->total('rental'),
-                    'dtotal' => $this->FunctionController->dtotal('rental'),
-                    'notUser' => true
-                ]);
-            }
-        } else {
-            return Redirect::route('home')
-                ->with(['status' => 'Anda tidak punya akses disini.']);
-        }
     }
 
     public function deny()
@@ -101,56 +80,84 @@ class RentalController extends Controller
 
     public function store(Request $req)
     {
-        // Auth Roles Rental     
-        if (
-            $this->FunctionController->onlyUserRental() == true ||
-            $this->FunctionController->onlyAdminRental() == true ||
-            $this->FunctionController->superAdmin() == true
-        ) {
             Validator::make($req->all(), [
                 'code' => 'required',
                 'name' => 'required',
+                'tlahir' => 'required',
+                'tgllahir' => 'required|date',
+                'jnsklmn' => 'required',
+                'noktp' => 'required',
+                'bnoktp' => 'required',
+                'agama' => 'required',
+                'ibukandung' => 'required',
+                'notlp' => 'required',
+                'statuskawin' => 'required',
+                'thnstatuskawin' => 'required',
                 'address' => 'required',
-                'status' => 'required',
-                'pln' => 'required',
-                'pdam' => 'required',
-                'pbb' => 'required',
-                'wifi' => 'required',
-                'rental' => 'required',
-                'due' => 'required|date',
+                'rtrw' => 'required',
+                'kel' => 'required',
+                'kec' => 'required',
+                'kab' => 'required',
+                'kodepos' => 'required',
+                'prov' => 'required',
+                'domisili' => 'required',
+                'dom_rtrw' => 'required',
+                'dom_kel' => 'required',
+                'dom_kec' => 'required',
+                'dom_kab' => 'required',
+                'dom_prov' => 'required',
+                'stts_tmpttgl' => 'required',
+                'stts_tmpttgl_lain' => 'required',
+                'pend_terakhir' => 'required',
+                'pend_terakhir_thn' => 'required',
+                'pkrjaan' => 'required',
+                'gaji_perbulan' => 'required',
+                'jns_prmohn' => 'required',
+                'nom_tab' => 'required',
+                'nom_tab_per' => 'required',
+                'nom_tab_terbilang' => 'required',
             ])->validate();
-
-            // Permissions
-            $addPermissions = $this->FunctionController->add();
 
             Rental::create([
                 'code' => $req->code,
                 'name' => $req->name,
+                'tlahir' => $req->tlahir,
+                'tgllahir' => $req->tgllahir,
+                'jnsklmn' => $req->jnsklmn,
+                'noktp' => $req->noktp,
+                'bnoktp' => $req->bnoktp,
+                'agama' => $req->agama,
+                'ibukandung' => $req->ibukandung,
+                'notlp' => $req->notlp,
+                'statuskawin' => $req->statuskawin,
+                'thnstatuskawin' => $req->thnstatuskawin,
                 'address' => $req->address,
-                'status' => $req->status,
-                'pln' => $req->pln,
-                'pdam' => $req->pdam,
-                'pbb' => $req->pbb,
-                'wifi' => $req->wifi,
-                'rental' => $req->rental,
-                'due' => $req->due,
+                'rtrw' => $req->rtrw,
+                'kel' => $req->kel,
+                'kec' => $req->kec,
+                'kab' => $req->kab,
+                'kodepos' => $req->kodepos,
+                'prov' => $req->prov,
+                'domisili' => $req->domisili,
+                'dom_rtrw' => $req->dom_rtrw,
+                'dom_kel' => $req->dom_kel,
+                'dom_kec' => $req->dom_kec,
+                'dom_kab' => $req->dom_kab,
+                'dom_prov' => $req->dom_prov,
+                'stts_tmpttgl' => $req->stts_tmpttgl,
+                'stts_tmpttgl_lain' => $req->stts_tmpttgl_lain,
+                'pend_terakhir' => $req->pend_terakhir,
+                'pend_terakhir_thn' => $req->pend_terakhir_thn,
+                'pkrjaan' => $req->pkrjaan,
+                'gaji_perbulan' => $req->gaji_perbulan,
+                'jns_prmohn' => $req->jns_prmohn,
+                'nom_tab' => $req->nom_tab,
+                'nom_tab_per' => $req->nom_tab_per,
+                'nom_tab_terbilang' => $req->nom_tab_terbilang,
                 'info' => $req->info,
-                'add' => $addPermissions == true ? 1 : 0,
-                'edit' => 0,
-                'del' => 0
             ]);
 
-            return $this->FunctionController->onlyUserRental() == true ?
-                Redirect::route('rental.index')
-                ->with([
-                    'status' => 'Data anda sedang di proses Admin, 
-                    silahkan menunggu atau melihat status data Anda di halaman persetujuan.'
-                ]) :
                 Redirect::route('rental.index');
-        } else {
-            return Redirect::route('home')
-                ->with(['status' => 'Anda tidak punya akses disini.']);
-        }
     }
 
     public function edit($id)

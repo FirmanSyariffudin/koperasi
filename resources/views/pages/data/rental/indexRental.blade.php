@@ -7,35 +7,7 @@
 @endsection
 
 @section('content')
-@include('pages.data.components.notification')
-<div class="row">
-    <div class="col-12">
-        <div class="card mb-0">
-            <div class="card-body">
-                <ul class="nav nav-pills">
-                    <li class="nav-item">
-                        <a class="nav-link {{ Request::route()->getName() == 'rental.index' ? 'active' : '' }}"
-                            href="{{ route('rental.index') }}">{{ __('Semua') }}
-                            <span
-                                class="badge badge-{{ Request::route()->getName() == 'rental.index' ? 'white' : 'primary' }}">
-                                {{ $total }}
-                            </span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link {{ Request::route()->getName() == 'rental.deny' ? 'active' : '' }}"
-                            href="{{ route('rental.deny') }}">{{ __('Ditolak') }}
-                            <span
-                                class="badge badge-{{ Request::route()->getName() == 'rental.deny' ? 'white' : 'primary' }}">
-                                {{ $dtotal }}
-                            </span>
-                        </a>
-                    </li>
-                </ul>
-            </div>
-        </div>
-    </div>
-</div>
+
 <div class="card mt-3">
     <div class="card-header">
         <a href="{{ route('rental.create') }}" class="btn btn-icon icon-left btn-primary">
