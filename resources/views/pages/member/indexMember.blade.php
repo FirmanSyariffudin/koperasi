@@ -7,7 +7,7 @@
 @endsection
 
 @section('content')
-
+@include('pages.data.components.notification')
 <div class="card mt-3">
     <div class="card-header">
         <a href="{{ route('member.create') }}" class="btn btn-icon icon-left btn-primary">

@@ -8,11 +8,9 @@
 
 @section('content')
 @include('pages.data.components.notification')
-@include('pages.data.components.header', ['index' => 'equipment.index', 'total' => $total,
-'deny' => 'equipment.deny', 'dtotal'=>$dtotal])
 <div class="card mt-3">
     <div class="card-header">
-        <a href="{{ route('equipment.create') }}" class="btn btn-icon icon-left btn-primary">
+        <a href="{{ route('request.create') }}" class="btn btn-icon icon-left btn-primary">
             <i class="far fa-edit"></i>{{ __(' Tambah Perlengkapan') }}</a>
     </div>
     <div class="card-body">
@@ -39,58 +37,58 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach($equipment as $number => $e)
+                @foreach($request as $number => $r)
                 <tr>
                     <td class="text-center">
                         {{ $number+1 }}
                     </td>
                     <td class="text-center">
-                        {{ $e->code }}
+                        {{ $r->code }}
                     </td>
                     <td>
-                        {{ $e->name }}
+                        {{ $r->name }}
                     </td>
                     <td>
-                        {{ $e->brand }}
+                        {{ $r->brand }}
                     </td>
                     <td>
-                        {{ __('Rp.').number_format($e->price_acq) }}
+                        {{ __('Rp.').number_format($r->price_acq) }}
                     </td>
                     <td>
-                        {{ date("m-Y", strtotime($e->date_acq)) }}
+                        {{ date("m-Y", strtotime($r->date_acq)) }}
                     </td>
                     <td>
-                        {{ $e->qty }}
+                        {{ $r->qty }}
                     </td>
                     <td>
                         <span class="badge badge-info">
-                            {{ $e->condition }}
+                            {{ $r->condition }}
                         </span>
                     </td>
                     <td>
-                        {{ $e->relationRoom->name }}
+                        {{ $r->relationRoom->name }}
                     </td>
                     <td>
-                        {{ $e->info }}
+                        {{ $r->info }}
                     </td>
                     @isset($notUser)
                     <td>
                         <div class="btn-group">
-                            <a href="{{ route('equipment.show',$e->id) }}" class="btn btn-primary">{{ __('Lihat') }}</a>
+                            <a href="{{ route('equipment.show',$r->id) }}" class="btn btn-primary">{{ __('Lihat') }}</a>
                             <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split"
                                 data-toggle="dropdown">
                                 <span class="sr-only">{{ __('Toggle Dropdown') }}</span>
                             </button>
                             <div class="dropdown-menu">
                                 <a class="dropdown-item"
-                                    href="{{ route('equipment.edit',$e->id) }}">{{ __('pages.editItem') }}</a>
-                                <form id="del-data{{ $e->id }}" action="{{ route('equipment.destroy',$e->id) }}"
+                                    href="{{ route('equipment.edit',$r->id) }}">{{ __('pages.editItem') }}</a>
+                                <form id="del-data{{ $r->id }}" action="{{ route('equipment.destroy',$r->id) }}"
                                     method="POST" class="d-inline">
                                     @csrf
                                     @method('DELETE')
                                     <a class="dropdown-item" style="cursor: pointer"
                                         data-confirm="Apakah Anda Yakin?|Aksi ini tidak dapat dikembalikan. Apakah ingin melanjutkan?"
-                                        data-confirm-yes="document.getElementById('del-data{{ $e->id }}').submit();">
+                                        data-confirm-yes="document.getElementById('del-data{{ $r->id }}').submit();">
                                         {{ __('pages.delItem') }}
                                     </a>
                                 </form>

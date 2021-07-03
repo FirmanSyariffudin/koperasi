@@ -30,10 +30,6 @@ Route::get('/home', [HomeController::class, 'index'])
 
 // Request
 Route::resource('request', RequestController::class);
-Route::get('/approve/request', [RequestController::class, 'approv'])
-    ->name('request.approv');
-Route::get('/deny/request', [RequestController::class, 'deny'])
-    ->name('request.deny');
 
 // Member
 Route::resource('member', MemberController::class);
