@@ -26,15 +26,6 @@ class HomeController extends Controller
      */
     public function index()
     {
-        $production = Production::count();
-        $equipment = Equipment::count();
-        $rental = Rental::count();
-        $vehicle = Vehicle::count();
-        return view('home', [
-            'production' => $production,
-            'equipment' => $equipment,
-            'rental' => $rental,
-            'vehicle' => $vehicle,
-        ]);
+        return view('home');
     }
 }

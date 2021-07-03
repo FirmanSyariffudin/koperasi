@@ -24,7 +24,7 @@
                     <h4>{{ __('Total Alat Produksi') }}</h4>
                 </div>
                 <div class="card-body">
-                    {{ $production }}
+                    {{-- {{ $production }} --}}
                 </div>
             </div>
         </div>
@@ -39,7 +39,7 @@
                     <h4>{{ __('Total Perlengkapan') }}</h4>
                 </div>
                 <div class="card-body">
-                    {{ $equipment }}
+                    {{-- {{ $equipment }} --}}
                 </div>
             </div>
         </div>
@@ -54,7 +54,7 @@
                     <h4>{{ __('Total Persewaan Gedung') }}</h4>
                 </div>
                 <div class="card-body">
-                    {{ $rental }}
+                    {{-- {{ $rental }} --}}
                 </div>
             </div>
         </div>
@@ -69,7 +69,7 @@
                     <h4>{{ __('Total Kendaraan') }}</h4>
                 </div>
                 <div class="card-body">
-                    {{ $vehicle }}
+                    {{-- {{ $vehicle }} --}}
                 </div>
             </div>
         </div>

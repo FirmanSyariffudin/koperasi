@@ -11,7 +11,7 @@
                 <img alt="image" src="{{ asset('avatar.png') }}" class="rounded-circle mr-1">
                 <div class="d-sm-none d-lg-inline-block">{{ __('Hai, ') . Auth::user()->name }}</div>
             </a>
-            <div class="dropdown-menu dropdown-menu-right">2
+            <div class="dropdown-menu dropdown-menu-right">
                 <a id="name" class="dropdown-item has-icon" style="cursor: pointer">
                     <i class="fas fa-user"></i> {{ __('Ganti Nama') }}
                 </a>
