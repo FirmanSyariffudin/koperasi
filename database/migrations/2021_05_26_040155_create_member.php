@@ -4,7 +4,7 @@ use Illuminate\Database\Migrations\Migration;
 use Illuminate\Database\Schema\Blueprint;
 use Illuminate\Support\Facades\Schema;
 
-class CreateRental extends Migration
+class CreateMember extends Migration
 {
     /**
      * Run the migrations.
@@ -13,7 +13,7 @@ class CreateRental extends Migration
      */
     public function up()
     {
-        Schema::create('rental', function (Blueprint $table) {
+        Schema::create('member', function (Blueprint $table) {
             $table->id();
             $table->string('code');
             $table->string('name');
