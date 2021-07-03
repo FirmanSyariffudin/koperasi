@@ -37,10 +37,6 @@ Route::get('/deny/request', [RequestController::class, 'deny'])
 
 // Member
 Route::resource('member', MemberController::class);
-Route::get('/approve/member', [MemberController::class, 'approv'])
-    ->name('member.approv');
-Route::get('/deny/member', [MemberController::class, 'deny'])
-    ->name('member.deny');
 
 // Users
 Route::resource('users', UsersController::class)->except([

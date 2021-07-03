@@ -10,7 +10,7 @@
 
 <div class="card mt-3">
     <div class="card-header">
-        <a href="{{ route('rental.create') }}" class="btn btn-icon icon-left btn-primary">
+        <a href="{{ route('member.create') }}" class="btn btn-icon icon-left btn-primary">
             <i class="far fa-edit"></i>{{ __(' Tambah Anggota') }}</a>
     </div>
     <div class="card-body">
@@ -39,66 +39,66 @@
                 </tr>
             </thead>
             <tbody>
-                @foreach($rental as $number => $r)
+                @foreach($member as $number => $m)
                 <tr>
                     <td class="text-center">
                         {{ $number+1 }}
                     </td>
                     <td class="text-center">
-                        {{ $r->code }}
+                        {{ $m->code }}
                     </td>
                     <td>
-                        {{ $r->name }}
+                        {{ $m->name }}
                     </td>
                     <td>
                         <span class="badge badge-info">
-                            {{ $r->status }}
+                            {{ $m->status }}
                         </span>
                     </td>
                     <td>
                         <span class="badge badge-info">
-                            {{ $r->rental }}
+                            {{ $m->rental }}
                         </span>
                     </td>
                     <td>
-                        {{ date("m-Y", strtotime($r->due)) }}
+                        {{ date("m-Y", strtotime($m->due)) }}
                     </td>
                     <td>
-                        {{ $r->pbb }}
+                        {{ $m->pbb }}
                     </td>
                     <td>
-                        {{ $r->pln }}
+                        {{ $m->pln }}
                     </td>
                     <td>
-                        {{ $r->pdam }}
+                        {{ $m->pdam }}
                     </td>
                     <td>
-                        {{ $r->wifi }}
+                        {{ $m->wifi }}
                     </td>
                     <td>
-                        {{ $r->address }}
+                        {{ $m->address }}
                     </td>
                     <td>
-                        {{ $r->info }}
+                        {{ $m->info }}
                     </td>
                     @isset($notUser)
                     <td>
                         <div class="btn-group">
-                            <a href="{{ route('rental.show',$r->id) }}" class="btn btn-primary">{{ __('Lihat') }}</a>
+                            <a href="{{ route('rental.show',$m->id) }}" class="btn btn-primary">{{ __('Lihat') }}</a>
                             <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split"
                                 data-toggle="dropdown">
                                 <span class="sr-only">{{ __('Toggle Dropdown') }}</span>
                             </button>
                             <div class="dropdown-menu">
                                 <a class="dropdown-item"
-                                    href="{{ route('rental.edit',$r->id) }}">{{ __('pages.editItem') }}</a>
-                                <form id="del-data{{ $r->id }}" action="{{ route('rental.destroy',$r->id) }}"
+                                    href="{{ route('rental.edit',$m->id) }}">{{ __('pages.editItem') }}</a>
+                                <form id="del-data{{ $m->id }}" action="{{ route('rental.destroy',$m->id) }}"
                                     method="POST" class="d-inline">
                                     @csrf
                                     @method('DELETE')
                                     <a class="dropdown-item" style="cursor: pointer"
                                         data-confirm="Apakah Anda Yakin?|Aksi ini tidak dapat dikembalikan. Apakah ingin melanjutkan?"
-                                        data-confirm-yes="document.getElementById('del-data{{ $r->id }}').submit();">
+                                        data-confirm-yes="document.getElementById('del-data{{ $m->id }}').submit();">
                                         {{ __('pages.delItem') }}
                                     </a>
                                 </form>
