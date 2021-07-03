@@ -29,15 +29,6 @@ class RequestController extends Controller
      * @return \Illuminate\Contracts\Support\Renderable
      */
 
-    function getData($data)
-    {
-        $equipment = Equipment::where('add', 0)
-            ->where('edit', 0);
-
-        return $data == 1 ? $equipment->where('del', 0)->get() :
-            $equipment->where('del', 1)->get();
-    }
-
     public function index()
     {
         // Auth Roles Equipment        
