@@ -8,7 +8,7 @@ use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
 
-class RentalController extends Controller
+class MemberController extends Controller
 {
     /**
      * Create a new controller instance.
@@ -38,9 +38,9 @@ class RentalController extends Controller
 
     public function index()
     {
-                return view('pages.data.rental.indexRental', [
-                    'rental' => Rental::all(),
-                ]);
+        return view('pages.data.rental.indexRental', [
+            'rental' => Rental::all(),
+        ]);
     }
 
     public function deny()
@@ -80,84 +80,84 @@ class RentalController extends Controller
 
     public function store(Request $req)
     {
-            Validator::make($req->all(), [
-                'code' => 'required',
-                'name' => 'required',
-                'tlahir' => 'required',
-                'tgllahir' => 'required|date',
-                'jnsklmn' => 'required',
-                'noktp' => 'required',
-                'bnoktp' => 'required',
-                'agama' => 'required',
-                'ibukandung' => 'required',
-                'notlp' => 'required',
-                'statuskawin' => 'required',
-                'thnstatuskawin' => 'required',
-                'address' => 'required',
-                'rtrw' => 'required',
-                'kel' => 'required',
-                'kec' => 'required',
-                'kab' => 'required',
-                'kodepos' => 'required',
-                'prov' => 'required',
-                'domisili' => 'required',
-                'dom_rtrw' => 'required',
-                'dom_kel' => 'required',
-                'dom_kec' => 'required',
-                'dom_kab' => 'required',
-                'dom_prov' => 'required',
-                'stts_tmpttgl' => 'required',
-                'stts_tmpttgl_lain' => 'required',
-                'pend_terakhir' => 'required',
-                'pend_terakhir_thn' => 'required',
-                'pkrjaan' => 'required',
-                'gaji_perbulan' => 'required',
-                'jns_prmohn' => 'required',
-                'nom_tab' => 'required',
-                'nom_tab_per' => 'required',
-                'nom_tab_terbilang' => 'required',
-            ])->validate();
+        Validator::make($req->all(), [
+            'code' => 'required',
+            'name' => 'required',
+            'tlahir' => 'required',
+            'tgllahir' => 'required|date',
+            'jnsklmn' => 'required',
+            'noktp' => 'required',
+            'bnoktp' => 'required',
+            'agama' => 'required',
+            'ibukandung' => 'required',
+            'notlp' => 'required',
+            'statuskawin' => 'required',
+            'thnstatuskawin' => 'required',
+            'address' => 'required',
+            'rtrw' => 'required',
+            'kel' => 'required',
+            'kec' => 'required',
+            'kab' => 'required',
+            'kodepos' => 'required',
+            'prov' => 'required',
+            'domisili' => 'required',
+            'dom_rtrw' => 'required',
+            'dom_kel' => 'required',
+            'dom_kec' => 'required',
+            'dom_kab' => 'required',
+            'dom_prov' => 'required',
+            'stts_tmpttgl' => 'required',
+            'stts_tmpttgl_lain' => 'required',
+            'pend_terakhir' => 'required',
+            'pend_terakhir_thn' => 'required',
+            'pkrjaan' => 'required',
+            'gaji_perbulan' => 'required',
+            'jns_prmohn' => 'required',
+            'nom_tab' => 'required',
+            'nom_tab_per' => 'required',
+            'nom_tab_terbilang' => 'required',
+        ])->validate();
 
-            Rental::create([
-                'code' => $req->code,
-                'name' => $req->name,
-                'tlahir' => $req->tlahir,
-                'tgllahir' => $req->tgllahir,
-                'jnsklmn' => $req->jnsklmn,
-                'noktp' => $req->noktp,
-                'bnoktp' => $req->bnoktp,
-                'agama' => $req->agama,
-                'ibukandung' => $req->ibukandung,
-                'notlp' => $req->notlp,
-                'statuskawin' => $req->statuskawin,
-                'thnstatuskawin' => $req->thnstatuskawin,
-                'address' => $req->address,
-                'rtrw' => $req->rtrw,
-                'kel' => $req->kel,
-                'kec' => $req->kec,
-                'kab' => $req->kab,
-                'kodepos' => $req->kodepos,
-                'prov' => $req->prov,
-                'domisili' => $req->domisili,
-                'dom_rtrw' => $req->dom_rtrw,
-                'dom_kel' => $req->dom_kel,
-                'dom_kec' => $req->dom_kec,
-                'dom_kab' => $req->dom_kab,
-                'dom_prov' => $req->dom_prov,
-                'stts_tmpttgl' => $req->stts_tmpttgl,
-                'stts_tmpttgl_lain' => $req->stts_tmpttgl_lain,
-                'pend_terakhir' => $req->pend_terakhir,
-                'pend_terakhir_thn' => $req->pend_terakhir_thn,
-                'pkrjaan' => $req->pkrjaan,
-                'gaji_perbulan' => $req->gaji_perbulan,
-                'jns_prmohn' => $req->jns_prmohn,
-                'nom_tab' => $req->nom_tab,
-                'nom_tab_per' => $req->nom_tab_per,
-                'nom_tab_terbilang' => $req->nom_tab_terbilang,
-                'info' => $req->info,
-            ]);
+        Rental::create([
+            'code' => $req->code,
+            'name' => $req->name,
+            'tlahir' => $req->tlahir,
+            'tgllahir' => $req->tgllahir,
+            'jnsklmn' => $req->jnsklmn,
+            'noktp' => $req->noktp,
+            'bnoktp' => $req->bnoktp,
+            'agama' => $req->agama,
+            'ibukandung' => $req->ibukandung,
+            'notlp' => $req->notlp,
+            'statuskawin' => $req->statuskawin,
+            'thnstatuskawin' => $req->thnstatuskawin,
+            'address' => $req->address,
+            'rtrw' => $req->rtrw,
+            'kel' => $req->kel,
+            'kec' => $req->kec,
+            'kab' => $req->kab,
+            'kodepos' => $req->kodepos,
+            'prov' => $req->prov,
+            'domisili' => $req->domisili,
+            'dom_rtrw' => $req->dom_rtrw,
+            'dom_kel' => $req->dom_kel,
+            'dom_kec' => $req->dom_kec,
+            'dom_kab' => $req->dom_kab,
+            'dom_prov' => $req->dom_prov,
+            'stts_tmpttgl' => $req->stts_tmpttgl,
+            'stts_tmpttgl_lain' => $req->stts_tmpttgl_lain,
+            'pend_terakhir' => $req->pend_terakhir,
+            'pend_terakhir_thn' => $req->pend_terakhir_thn,
+            'pkrjaan' => $req->pkrjaan,
+            'gaji_perbulan' => $req->gaji_perbulan,
+            'jns_prmohn' => $req->jns_prmohn,
+            'nom_tab' => $req->nom_tab,
+            'nom_tab_per' => $req->nom_tab_per,
+            'nom_tab_terbilang' => $req->nom_tab_terbilang,
+            'info' => $req->info,
+        ]);
 
-                Redirect::route('rental.index');
+        Redirect::route('rental.index');
     }
 
     public function edit($id)

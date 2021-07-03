@@ -5,7 +5,7 @@ namespace App\Models;
 use Illuminate\Database\Eloquent\Factories\HasFactory;
 use Illuminate\Database\Eloquent\Model;
 
-class Equipment extends Model
+class Request extends Model
 {
     use HasFactory;
     /**
@@ -14,7 +14,7 @@ class Equipment extends Model
      * @var array
      */
 
-    protected $table = 'equipment';
+    protected $table = 'request';
     public $remember_token = false;
     public $timestamps = false;
 

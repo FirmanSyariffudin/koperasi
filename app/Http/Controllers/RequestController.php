@@ -10,7 +10,7 @@ use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
 use Illuminate\Support\Facades\Storage;
 
-class EquipmentController extends Controller
+class RequestController extends Controller
 {
     /**
      * Create a new controller instance.
