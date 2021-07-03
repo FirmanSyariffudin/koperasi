@@ -3,8 +3,6 @@
 namespace App\Http\Controllers;
 
 use App\Models\Member;
-use App\Models\Rental;
-use App\Models\TempRental;
 use Illuminate\Http\Request;
 use Illuminate\Support\Facades\Redirect;
 use Illuminate\Support\Facades\Validator;
