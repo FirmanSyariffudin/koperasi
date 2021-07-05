@@ -7,7 +7,6 @@
 @endsection
 
 @section('content')
-@include('pages.data.components.notification')
 <div class="card mt-3">
     <div class="card-header">
         <a href="{{ route('member.create') }}" class="btn btn-icon icon-left btn-primary">
@@ -23,16 +22,11 @@
                     <th class="text-center">
                         {{ __('Kode') }}
                     </th>
-                    <th>{{ __('Nama Gedung') }}</th>
-                    <th>{{ __('Pembayaran') }}</th>
-                    <th>{{ __('Status Gedung') }}</th>
-                    <th>{{ __('Jatuh Tempo') }}</th>
-                    <th>{{ __('No PBB') }}</th>
-                    <th>{{ __('No PLN') }}</th>
-                    <th>{{ __('No PDAM') }}</th>
-                    <th>{{ __('No Wifi') }}</th>
+                    <th>{{ __('Nama Anggota') }}</th>
+                    <th>{{ __('Jenis Permohonan') }}</th>
+                    <th>{{ __('Nama Ibu Kandung') }}</th>
                     <th>{{ __('Alamat') }}</th>
-                    <th>{{ __('Info') }}</th>
+                    <th>{{ __('Keterangan') }}</th>
                     @isset($notUser)
                     <th>{{ __('Aksi') }}</th>
                     @endisset
@@ -52,28 +46,14 @@
                     </td>
                     <td>
                         <span class="badge badge-info">
-                            {{ $m->status }}
+                            {{ $m->jns_prmohn }}
                         </span>
                     </td>
-                    <td>
-                        <span class="badge badge-info">
-                            {{ $m->rental }}
-                        </span>
-                    </td>
-                    <td>
+                    <!-- <td>
                         {{ date("m-Y", strtotime($m->due)) }}
-                    </td>
+                    </td> -->
                     <td>
-                        {{ $m->pbb }}
-                    </td>
-                    <td>
-                        {{ $m->pln }}
-                    </td>
-                    <td>
-                        {{ $m->pdam }}
-                    </td>
-                    <td>
-                        {{ $m->wifi }}
+                        {{ $m->ibukandung }}
                     </td>
                     <td>
                         {{ $m->address }}

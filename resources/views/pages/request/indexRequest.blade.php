@@ -1,17 +1,16 @@
 @extends('layouts.default')
-@section('title', __('pages.title').__(' | Data Perlengkapan'))
-@section('titleContent', __('Perlengkapan'))
+@section('title', __('pages.title').__(' | Data Permohonan'))
+@section('titleContent', __('Permohonan'))
 @section('breadcrumb', __('Data'))
 @section('morebreadcrumb')
-<div class="breadcrumb-item active">{{ __('Perlengkapan') }}</div>
+<div class="breadcrumb-item active">{{ __('Permohonan') }}</div>
 @endsection
 
 @section('content')
-@include('pages.data.components.notification')
 <div class="card mt-3">
     <div class="card-header">
         <a href="{{ route('request.create') }}" class="btn btn-icon icon-left btn-primary">
-            <i class="far fa-edit"></i>{{ __(' Tambah Perlengkapan') }}</a>
+            <i class="far fa-edit"></i>{{ __(' Tambah Permohonan') }}</a>
     </div>
     <div class="card-body">
         <table class="table-striped table" id="tables" width="100%">
@@ -23,16 +22,15 @@
                     <th class="text-center">
                         {{ __('Kode') }}
                     </th>
-                    <th>{{ __('Nama Perlengkapan') }}</th>
-                    <th>{{ __('Merk') }}</th>
-                    <th>{{ __('Harga Perolehan') }}</th>
-                    <th>{{ __('Tanggal Perolehan') }}</th>
-                    <th>{{ __('Qty') }}</th>
-                    <th>{{ __('Kondisi') }}</th>
-                    <th>{{ __('Lokasi') }}</th>
+                    <th>{{ __('Nama Pemohon') }}</th>
+                    <th>{{ __('Tempat Lahir') }}</th>
+                    <th>{{ __('Alamat') }}</th>
+                    <th>{{ __('Pekerjaan') }}</th>
+                    <th>{{ __('Jumlah Pengajuan') }}</th>
+                    <th>{{ __('Keperluan') }}</th>
                     <th>{{ __('Keterangan') }}</th>
                     @isset($notUser)
-                    <th>{{ __('Aksi') }}</th>
+                    <!-- <th>{{ __('Aksi') }}</th> -->
                     @endisset
                 </tr>
             </thead>
@@ -49,24 +47,22 @@
                         {{ $r->name }}
                     </td>
                     <td>
-                        {{ $r->brand }}
+                        {{ $r->tmpt_lahir }}
                     </td>
-                    <td>
-                        {{ __('Rp.').number_format($r->price_acq) }}
-                    </td>
-                    <td>
+                    <!-- <td>
                         {{ date("m-Y", strtotime($r->date_acq)) }}
+                    </td> -->
+                    <td>
+                        {{ $r->address }}
                     </td>
                     <td>
-                        {{ $r->qty }}
+                        {{ $r->pkerjaan }}
                     </td>
                     <td>
-                        <span class="badge badge-info">
-                            {{ $r->condition }}
-                        </span>
+                        {{ $r->jml_pngajuan }}
                     </td>
                     <td>
-                        {{ $r->relationRoom->name }}
+                        {{ $r->keperluan }}
                     </td>
                     <td>
                         {{ $r->info }}

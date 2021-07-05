@@ -35,7 +35,7 @@ class MemberController extends Controller
 
     public function create()
     {
-        $code = "RT-" . str_pad($this->FunctionController->getRandom('member'), 5, '0', STR_PAD_LEFT);
+        $code = "AG-" . str_pad($this->FunctionController->getRandom('member'), 5, '0', STR_PAD_LEFT);
         return view('pages.member.createMember', ['code' => $code]);
     }
 
