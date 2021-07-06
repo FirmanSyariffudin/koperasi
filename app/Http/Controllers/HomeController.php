@@ -3,9 +3,11 @@
 namespace App\Http\Controllers;
 
 use App\Models\Equipment;
+use App\Models\Member;
 use App\Models\Production;
 use App\Models\Vehicle;
 use App\Models\Rental;
+use App\Models\Request;
 
 class HomeController extends Controller
 {
@@ -26,6 +28,10 @@ class HomeController extends Controller
      */
     public function index()
     {
-        return view('home');
+        $request = Request::count();
+        $member = Member::count();
+        return view('home', [
+            'request' => $request, 'member' => $member
+        ]);
     }
 }

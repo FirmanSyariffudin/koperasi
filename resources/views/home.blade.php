@@ -16,45 +16,15 @@
 <div class="row">
     <div class="col">
         <div class="card card-statistic-1">
-            <div class="card-icon bg-primary">
-                <i class="fas fa-exchange-alt"></i>
-            </div>
-            <div class="card-wrap">
-                <div class="card-header">
-                    <h4>{{ __('Total Alat Produksi') }}</h4>
-                </div>
-                <div class="card-body">
-                    {{-- {{ $production }} --}}
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col">
-        <div class="card card-statistic-1">
-            <div class="card-icon bg-danger">
-                <i class="fas fa-boxes"></i>
-            </div>
-            <div class="card-wrap">
-                <div class="card-header">
-                    <h4>{{ __('Total Perlengkapan') }}</h4>
-                </div>
-                <div class="card-body">
-                    {{-- {{ $equipment }} --}}
-                </div>
-            </div>
-        </div>
-    </div>
-    <div class="col">
-        <div class="card card-statistic-1">
             <div class="card-icon bg-info">
-                <i class="fas fa-chalkboard-teacher"></i>
+                <i class="fas fa-users"></i>
             </div>
             <div class="card-wrap">
                 <div class="card-header">
-                    <h4>{{ __('Total Persewaan Gedung') }}</h4>
+                    <h4>{{ __('Total Anggota') }}</h4>
                 </div>
                 <div class="card-body">
-                    {{-- {{ $rental }} --}}
+                    {{ $member }}
                 </div>
             </div>
         </div>
@@ -62,14 +32,14 @@
     <div class="col">
         <div class="card card-statistic-1">
             <div class="card-icon bg-success">
-                <i class="fas fa-users"></i>
+                <i class="fas fa-folder"></i>
             </div>
             <div class="card-wrap">
                 <div class="card-header">
-                    <h4>{{ __('Total Kendaraan') }}</h4>
+                    <h4>{{ __('Total Permohonan') }}</h4>
                 </div>
                 <div class="card-body">
-                    {{-- {{ $vehicle }} --}}
+                    {{ $request }}
                 </div>
             </div>
         </div>
