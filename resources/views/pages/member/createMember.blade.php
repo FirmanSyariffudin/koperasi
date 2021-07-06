@@ -377,9 +377,9 @@
                 </div>
                 <div class="col">
                     <div class="form-group">
-                        <label>{{ __('Lain - lain') }}<code>*</code></label>
+                        <label>{{ __('Lain - lain') }}</label>
                         <input type="text" class="form-control @error('stts_tmpttgl_lain') is-invalid @enderror"
-                            name="stts_tmpttgl_lain" required>
+                            name="stts_tmpttgl_lain">
                         @error('stts_tmpttgl_lain')
                         <span class="text-danger" role="alert">
                             {{ $message }}

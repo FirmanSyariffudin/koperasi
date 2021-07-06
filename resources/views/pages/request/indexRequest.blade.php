@@ -29,9 +29,7 @@
                     <th>{{ __('Jumlah Pengajuan') }}</th>
                     <th>{{ __('Keperluan') }}</th>
                     <th>{{ __('Keterangan') }}</th>
-                    @isset($notUser)
-                    <!-- <th>{{ __('Aksi') }}</th> -->
-                    @endisset
+                    <th>{{ __('Aksi') }}</th>
                 </tr>
             </thead>
             <tbody>
@@ -67,18 +65,17 @@
                     <td>
                         {{ $r->info }}
                     </td>
-                    @isset($notUser)
                     <td>
                         <div class="btn-group">
-                            <a href="{{ route('equipment.show',$r->id) }}" class="btn btn-primary">{{ __('Lihat') }}</a>
+                            <a href="{{ route('request.show',$r->id) }}" class="btn btn-primary">{{ __('Lihat') }}</a>
                             <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split"
                                 data-toggle="dropdown">
                                 <span class="sr-only">{{ __('Toggle Dropdown') }}</span>
                             </button>
                             <div class="dropdown-menu">
                                 <a class="dropdown-item"
-                                    href="{{ route('equipment.edit',$r->id) }}">{{ __('pages.editItem') }}</a>
-                                <form id="del-data{{ $r->id }}" action="{{ route('equipment.destroy',$r->id) }}"
+                                    href="{{ route('request.edit',$r->id) }}">{{ __('pages.editItem') }}</a>
+                                <form id="del-data{{ $r->id }}" action="{{ route('request.destroy',$r->id) }}"
                                     method="POST" class="d-inline">
                                     @csrf
                                     @method('DELETE')
@@ -91,7 +88,6 @@
                             </div>
                         </div>
                     </td>
-                    @endisset
                 </tr>
                 @endforeach
             </tbody>

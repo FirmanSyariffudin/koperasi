@@ -27,9 +27,7 @@
                     <th>{{ __('Nama Ibu Kandung') }}</th>
                     <th>{{ __('Alamat') }}</th>
                     <th>{{ __('Keterangan') }}</th>
-                    @isset($notUser)
                     <th>{{ __('Aksi') }}</th>
-                    @endisset
                 </tr>
             </thead>
             <tbody>
@@ -61,18 +59,17 @@
                     <td>
                         {{ $m->info }}
                     </td>
-                    @isset($notUser)
                     <td>
                         <div class="btn-group">
-                            <a href="{{ route('rental.show',$m->id) }}" class="btn btn-primary">{{ __('Lihat') }}</a>
+                            <a href="{{ route('member.show',$m->id) }}" class="btn btn-primary">{{ __('Lihat') }}</a>
                             <button type="button" class="btn btn-primary dropdown-toggle dropdown-toggle-split"
                                 data-toggle="dropdown">
                                 <span class="sr-only">{{ __('Toggle Dropdown') }}</span>
                             </button>
                             <div class="dropdown-menu">
                                 <a class="dropdown-item"
-                                    href="{{ route('rental.edit',$m->id) }}">{{ __('pages.editItem') }}</a>
-                                <form id="del-data{{ $m->id }}" action="{{ route('rental.destroy',$m->id) }}"
+                                    href="{{ route('member.edit',$m->id) }}">{{ __('pages.editItem') }}</a>
+                                <form id="del-data{{ $m->id }}" action="{{ route('member.destroy',$m->id) }}"
                                     method="POST" class="d-inline">
                                     @csrf
                                     @method('DELETE')
@@ -85,7 +82,6 @@
                             </div>
                         </div>
                     </td>
-                    @endisset
                 </tr>
                 @endforeach
             </tbody>

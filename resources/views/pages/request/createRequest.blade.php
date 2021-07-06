@@ -339,8 +339,8 @@
                 </div>
                 <div class="col">
                     <div class="form-group">
-                        <label>{{ __('Lain - lain') }}<code>*</code></label>
-                        <input type="text" class="form-control @error('rmhtgl_lain') is-invalid @enderror" name="rmhtgl_lain" required>
+                        <label>{{ __('Lain - lain') }}</label>
+                        <input type="text" class="form-control @error('rmhtgl_lain') is-invalid @enderror" name="rmhtgl_lain">
                         @error('rmhtgl_lain')
                         <span class="text-danger" role="alert">
                             {{ $message }}
@@ -388,8 +388,8 @@
                 </div>
                 <div class="col">
                     <div class="form-group">
-                        <label>{{ __('Lain-lain') }}<code>*</code></label>
-                        <input type="text" class="form-control @error('pend_lain') is-invalid @enderror" name="pend_lain" required>
+                        <label>{{ __('Lain-lain') }}</label>
+                        <input type="text" class="form-control @error('pend_lain') is-invalid @enderror" name="pend_lain">
                         @error('pend_lain')
                         <span class="text-danger" role="alert">
                             {{ $message }}
@@ -566,8 +566,7 @@
                 <div class="col">
                     <div class="form-group">
                         <label>{{ __('') }}</label>
-                        <input type="text" class="form-control @error('jml_disetujui2') is-invalid @enderror" name="jml_disetujui2" required
-                            autofocus>
+                        <input type="text" class="form-control @error('jml_disetujui2') is-invalid @enderror" name="jml_disetujui2" >
                         @error('jml_disetujui2')
                         <span class="text-danger" role="alert">
                             {{ $message }}
@@ -578,8 +577,7 @@
                 <div class="col">
                     <div class="form-group">
                         <label>{{ __('') }}</label>
-                        <input type="text" class="form-control @error('jml_disetujui3') is-invalid @enderror" name="jml_disetujui3" required
-                            autofocus>
+                        <input type="text" class="form-control @error('jml_disetujui3') is-invalid @enderror" name="jml_disetujui3" >
                         @error('jml_disetujui3')
                         <span class="text-danger" role="alert">
                             {{ $message }}
@@ -590,8 +588,7 @@
                 <div class="col">
                     <div class="form-group">
                         <label>{{ __('') }}</label>
-                        <input type="text" class="form-control @error('jml_disetujui4') is-invalid @enderror" name="jml_disetujui4" required
-                            autofocus>
+                        <input type="text" class="form-control @error('jml_disetujui4') is-invalid @enderror" name="jml_disetujui4" >
                         @error('jml_disetujui4')
                         <span class="text-danger" role="alert">
                             {{ $message }}

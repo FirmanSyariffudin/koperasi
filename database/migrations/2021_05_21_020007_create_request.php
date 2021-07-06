@@ -37,10 +37,10 @@ class CreateRequest extends Migration
             $table->string('dom_kec');
             $table->string('dom_kab');
             $table->string('dom_prov');
-            $table->enum('stts_rmhtgl', ['Hak Milik', 'Kontrak', 'Menumpang Wali', 'Rumah Dinas', 'Kos']);
+            $table->enum('stts_rmhtgl', ['Hak Milik', 'Kontrak', 'Menumpang Wali', 'Rumah Dinas', 'Kos'])->nullable();;
             $table->string('rmhtgl_lain');
             $table->string('pend_trakhir');
-            $table->string('pend_lain');
+            $table->string('pend_lain')->nullable();;
             $table->string('pkerjaan');
             $table->string('prusahaan');
             $table->string('jabatan');
@@ -54,9 +54,9 @@ class CreateRequest extends Migration
             $table->string('jml_pngajuan');
             $table->string('terbilang');
             $table->string('jml_disetujui');
-            $table->string('jml_disetujui2');
-            $table->string('jml_disetujui3');
-            $table->string('jml_disetujui4');
+            $table->string('jml_disetujui2')->nullable();;
+            $table->string('jml_disetujui3')->nullable();;
+            $table->string('jml_disetujui4')->nullable();;
             $table->longText('keperluan')->nullable();
             $table->string('jngka_wkt');
             $table->string('akad_pemb');

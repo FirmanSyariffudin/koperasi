@@ -41,13 +41,13 @@ class CreateMember extends Migration
             $table->string('dom_kab');
             $table->string('dom_prov');
             $table->enum('stts_tmpttgl', ['Hak Milik', 'Kontrak', 'Menumpang Wali', 'Rumah Dinas', 'Kos']);
-            $table->string('stts_tmpttgl_lain');
+            $table->string('stts_tmpttgl_lain')->nullable();
             $table->enum('pend_terakhir', ['MI', 'SD', 'SLTP', 'SLTA', 'D1 , D2', 'S1 , S2']);
             $table->string('pend_terakhir_thn');
             $table->string('pkrjaan');
             $table->string('gaji_perbulan');
             $table->enum('jns_prmohn', ['Tabungan Sahabat Muslim', 'Tabungan Idul Fitri', 'Tabungan Qurban', 'Tabungan Umroh', 'Tabungan Pendidikan']);
-            $table->date('nom_tab');
+            $table->string('nom_tab');
             $table->enum('nom_tab_per', ['Per-Bulan', 'Per-Minggu', 'Per-Hari']);
             $table->string('nom_tab_terbilang');
             $table->longText('info')->nullable();

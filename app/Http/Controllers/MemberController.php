@@ -68,7 +68,6 @@ class MemberController extends Controller
             'dom_kab' => 'required',
             'dom_prov' => 'required',
             'stts_tmpttgl' => 'required',
-            'stts_tmpttgl_lain' => 'required',
             'pend_terakhir' => 'required',
             'pend_terakhir_thn' => 'required',
             'pkrjaan' => 'required',
@@ -131,33 +130,56 @@ class MemberController extends Controller
 
     public function update($id, Request $req)
     {
-        Validator::make($req->all(), [
-            'name' => 'required',
-            'address' => 'required',
-            'status' => 'required',
-            'pln' => 'required',
-            'pdam' => 'required',
-            'pbb' => 'required',
-            'wifi' => 'required',
-            'rental' => 'required',
-            'due' => 'required|date',
-        ])->validate();
+        // Validator::make($req->all(), [
+        //     'name' => 'required',
+        //     'address' => 'required',
+        //     'status' => 'required',
+        //     'pln' => 'required',
+        //     'pdam' => 'required',
+        //     'pbb' => 'required',
+        //     'wifi' => 'required',
+        //     'rental' => 'required',
+        //     'due' => 'required|date',
+        // ])->validate();
 
         // Initiation
         $member = Member::find($id);
 
         $member->name = $req->name;
+        $member->tlahir = $req->tlahir;
+        $member->tgllahir = $req->tgllahir;
+        $member->jnsklmn = $req->jnsklmn;
+        $member->noktp = $req->noktp;
+        $member->bnoktp = $req->bnoktp;
+        $member->agama = $req->agama;
+        $member->ibukandung = $req->ibukandung;
+        $member->notlp = $req->notlp;
+        $member->statuskawin = $req->statuskawin;
+        $member->thnstatuskawin = $req->thnstatuskawin;
         $member->address = $req->address;
-        $member->status = $req->status;
-        $member->pln = $req->pln;
-        $member->pdam = $req->pdam;
-        $member->pbb = $req->pbb;
-        $member->wifi = $req->wifi;
-        $member->member = $req->member;
-        $member->due = $req->due;
+        $member->rtrw = $req->rtrw;
+        $member->kel = $req->kel;
+        $member->kec = $req->kec;
+        $member->kab = $req->kab;
+        $member->kodepos = $req->kodepos;
+        $member->prov = $req->prov;
+        $member->domisili = $req->domisili;
+        $member->dom_rtrw = $req->dom_rtrw;
+        $member->dom_kel = $req->dom_kel;
+        $member->dom_kec = $req->dom_kec;
+        $member->dom_kab = $req->dom_kab;
+        $member->dom_prov = $req->dom_prov;
+        $member->stts_tmpttgl = $req->stts_tmpttgl;
+        $member->stts_tmpttgl_lain = $req->stts_tmpttgl_lain;
+        $member->pend_terakhir = $req->pend_terakhir;
+        $member->pend_terakhir_thn = $req->pend_terakhir_thn;
+        $member->pkrjaan = $req->pkrjaan;
+        $member->gaji_perbulan = $req->gaji_perbulan;
+        $member->jns_prmohn = $req->jns_prmohn;
+        $member->nom_tab = $req->nom_tab;
+        $member->nom_tab_per = $req->nom_tab_per;
+        $member->nom_tab_terbilang = $req->nom_tab_terbilang;
         $member->info = $req->info;
-        $member->add = 0;
-        $member->del = 0;
         $member->save();
         return Redirect::route('member.index')->with([
             'status' => 'Data anda berhasil diubah, 
