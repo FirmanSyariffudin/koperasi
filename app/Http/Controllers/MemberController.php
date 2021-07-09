@@ -53,7 +53,6 @@ class MemberController extends Controller
             'ibukandung' => 'required',
             'notlp' => 'required',
             'statuskawin' => 'required',
-            'thnstatuskawin' => 'required',
             'address' => 'required',
             'rtrw' => 'required',
             'kel' => 'required',
@@ -77,6 +76,8 @@ class MemberController extends Controller
             'nom_tab_per' => 'required',
             'nom_tab_terbilang' => 'required',
         ])->validate();
+
+        // dd($req->jnsklmn);
 
         Member::create([
             'code' => $req->code,
@@ -199,6 +200,7 @@ class MemberController extends Controller
     public function show($id)
     {
         $member = Member::find($id);
+        // dd($member->nom_tab);
         return view('pages.member.showMember', ['member' => $member]);
     }
 }

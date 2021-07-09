@@ -68,11 +68,11 @@
                         <label class="form-label">{{ __('Jenis Kelamin') }}<code>*</code></label>
                         <div class="selectgroup w-100" id="status">
                             <label class="selectgroup-item">
-                                <input type="radio" name="jns_klamin" value="1" class="selectgroup-input" checked>
+                                <input type="radio" name="jns_klamin" value="1" class="selectgroup-input" {{ $request->jns_klamin == 1 ? 'checked' : '' }}>
                                 <span class="selectgroup-button">{{ __('Pria') }}</span>
                             </label>
                             <label class="selectgroup-item">
-                                <input type="radio" name="jns_klamin" value="2" class="selectgroup-input">
+                                <input type="radio" name="jns_klamin" value="2" class="selectgroup-input" {{ $request->jns_klamin == 2 ? 'checked' : '' }}>
                                 <span class="selectgroup-button">{{ __('Wanita') }}</span>
                             </label>
                         </div>
@@ -114,19 +114,19 @@
                         <label class="form-label">{{ __('Status Perkawinan') }}<code>*</code></label>
                         <div class="selectgroup w-100" id="status">
                             <label class="selectgroup-item">
-                                <input type="radio" name="stts_kawin" value="1" class="selectgroup-input" checked>
+                                <input type="radio" name="stts_kawin" value="1" class="selectgroup-input" {{ $request->stts_kawin == 1 ? 'checked' : '' }}>
                                 <span class="selectgroup-button">{{ __('Belum Nikah') }}</span>
                             </label>
                             <label class="selectgroup-item">
-                                <input type="radio" name="stts_kawin" value="2" class="selectgroup-input">
+                                <input type="radio" name="stts_kawin" value="2" class="selectgroup-input" {{ $request->stts_kawin == 2 ? 'checked' : '' }}>
                                 <span class="selectgroup-button">{{ __('Nikah') }}</span>
                             </label>
                             <label class="selectgroup-item">
-                                <input type="radio" name="stts_kawin" value="1" class="selectgroup-input" checked>
+                                <input type="radio" name="stts_kawin" value="3" class="selectgroup-input" {{ $request->stts_kawin == 3 ? 'checked' : '' }}>
                                 <span class="selectgroup-button">{{ __('Cerai Hidup') }}</span>
                             </label>
                             <label class="selectgroup-item">
-                                <input type="radio" name="stts_kawin" value="2" class="selectgroup-input">
+                                <input type="radio" name="stts_kawin" value="4" class="selectgroup-input" {{ $request->stts_kawin == 4 ? 'checked' : '' }}>
                                 <span class="selectgroup-button">{{ __('Cerai Mati') }}</span>
                             </label>
                         </div>
@@ -320,23 +320,23 @@
                         <label class="form-label">{{ __('Status Tempat Tinggal') }}<code>*</code></label>
                         <div class="selectgroup w-100" id="status">
                             <label class="selectgroup-item">
-                                <input type="radio" name="stts_rmhtgl" value="1" class="selectgroup-input" checked>
+                                <input type="radio" name="stts_rmhtgl" value="1" class="selectgroup-input" {{ $request->stts_rmhtgl == 1 ? 'checked' : '' }}>
                                 <span class="selectgroup-button">{{ __('Hak Milik') }}</span>
                             </label>
                             <label class="selectgroup-item">
-                                <input type="radio" name="stts_rmhtgl" value="2" class="selectgroup-input">
+                                <input type="radio" name="stts_rmhtgl" value="2" class="selectgroup-input" {{ $request->stts_rmhtgl == 2 ? 'checked' : '' }}>
                                 <span class="selectgroup-button">{{ __('Kontrak') }}</span>
                             </label>
                             <label class="selectgroup-item">
-                                <input type="radio" name="stts_rmhtgl" value="1" class="selectgroup-input" checked>
+                                <input type="radio" name="stts_rmhtgl" value="3" class="selectgroup-input" {{ $request->stts_rmhtgl == 3 ? 'checked' : '' }}>
                                 <span class="selectgroup-button">{{ __('Menumpang Wali') }}</span>
                             </label>
                             <label class="selectgroup-item">
-                                <input type="radio" name="stts_rmhtgl" value="2" class="selectgroup-input">
+                                <input type="radio" name="stts_rmhtgl" value="4" class="selectgroup-input" {{ $request->stts_rmhtgl == 4 ? 'checked' : '' }}>
                                 <span class="selectgroup-button">{{ __('Rumah Dinas') }}</span>
                             </label>
                             <label class="selectgroup-item">
-                                <input type="radio" name="stts_rmhtgl" value="1" class="selectgroup-input" checked>
+                                <input type="radio" name="stts_rmhtgl" value="5" class="selectgroup-input" {{ $request->stts_rmhtgl == 5 ? 'checked' : '' }}>
                                 <span class="selectgroup-button">{{ __('Kos') }}</span>
                             </label>
                         </div>
@@ -366,27 +366,27 @@
                         <label class="form-label">{{ __('Pendidikan Terakhir') }}<code>*</code></label>
                         <div class="selectgroup w-100" id="status">
                             <label class="selectgroup-item">
-                                <input type="radio" name="pend_trakhir" value="1" class="selectgroup-input" checked>
+                                <input type="radio" name="pend_trakhir" value="1" class="selectgroup-input" {{ $request->pend_trakhir == 1 ? 'checked' : '' }}>
                                 <span class="selectgroup-button">{{ __('MI') }}</span>
                             </label>
                             <label class="selectgroup-item">
-                                <input type="radio" name="pend_trakhir" value="2" class="selectgroup-input">
+                                <input type="radio" name="pend_trakhir" value="2" class="selectgroup-input" {{ $request->pend_trakhir == 2 ? 'checked' : '' }}>
                                 <span class="selectgroup-button">{{ __('SD') }}</span>
                             </label>
                             <label class="selectgroup-item">
-                                <input type="radio" name="pend_trakhir" value="1" class="selectgroup-input" checked>
+                                <input type="radio" name="pend_trakhir" value="3" class="selectgroup-input" {{ $request->pend_trakhir == 3 ? 'checked' : '' }}>
                                 <span class="selectgroup-button">{{ __('SLTP') }}</span>
                             </label>
                             <label class="selectgroup-item">
-                                <input type="radio" name="pend_trakhir" value="2" class="selectgroup-input">
+                                <input type="radio" name="pend_trakhir" value="4" class="selectgroup-input" {{ $request->pend_trakhir == 4 ? 'checked' : '' }}>
                                 <span class="selectgroup-button">{{ __('SLTA') }}</span>
                             </label>
                             <label class="selectgroup-item">
-                                <input type="radio" name="pend_trakhir" value="1" class="selectgroup-input" checked>
+                                <input type="radio" name="pend_trakhir" value="5" class="selectgroup-input" {{ $request->pend_trakhir == 5 ? 'checked' : '' }}>
                                 <span class="selectgroup-button">{{ __('D1 , D2') }}</span>
                             </label>
                             <label class="selectgroup-item">
-                                <input type="radio" name="pend_trakhir" value="2" class="selectgroup-input">
+                                <input type="radio" name="pend_trakhir" value="6" class="selectgroup-input" {{ $request->pend_trakhir == 6 ? 'checked' : '' }}>
                                 <span class="selectgroup-button">{{ __('S1 , S2') }}</span>
                             </label>
                         </div>

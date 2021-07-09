@@ -61,11 +61,11 @@
                         <label class="form-label">{{ __('Jenis Kelamin') }}<code>*</code></label>
                         <div class="selectgroup w-100" id="status">
                             <label class="selectgroup-item">
-                                <input type="radio" name="jnsklmn" value="1" class="selectgroup-input" checked>
+                                <input type="radio" name="jnsklmn" value="Pria" class="selectgroup-input" checked>
                                 <span class="selectgroup-button">{{ __('Pria') }}</span>
                             </label>
                             <label class="selectgroup-item">
-                                <input type="radio" name="jnsklmn" value="2" class="selectgroup-input">
+                                <input type="radio" name="jnsklmn" value="Wanita" class="selectgroup-input">
                                 <span class="selectgroup-button">{{ __('Wanita') }}</span>
                             </label>
                         </div>
@@ -145,19 +145,19 @@
                         <label class="form-label">{{ __('Status Perkawinan') }}<code>*</code></label>
                         <div class="selectgroup w-100" id="status">
                             <label class="selectgroup-item">
-                                <input type="radio" name="statuskawin" value="1" class="selectgroup-input" checked>
+                                <input type="radio" name="statuskawin" value="Belum Nikah" class="selectgroup-input" checked>
                                 <span class="selectgroup-button">{{ __('Belum Nikah') }}</span>
                             </label>
                             <label class="selectgroup-item">
-                                <input type="radio" name="statuskawin" value="2" class="selectgroup-input">
+                                <input type="radio" name="statuskawin" value="Nikah" class="selectgroup-input">
                                 <span class="selectgroup-button">{{ __('Nikah') }}</span>
                             </label>
                             <label class="selectgroup-item">
-                                <input type="radio" name="statuskawin" value="3" class="selectgroup-input" checked>
+                                <input type="radio" name="statuskawin" value="Cerai Hidup" class="selectgroup-input">
                                 <span class="selectgroup-button">{{ __('Cerai Hidup') }}</span>
                             </label>
                             <label class="selectgroup-item">
-                                <input type="radio" name="statuskawin" value="4" class="selectgroup-input">
+                                <input type="radio" name="statuskawin" value="Cerai Mati" class="selectgroup-input">
                                 <span class="selectgroup-button">{{ __('Cerai Mati') }}</span>
                             </label>
                         </div>
@@ -170,9 +170,9 @@
                 </div>
                 <div class="col">
                     <div class="form-group">
-                        <label>{{ __('Tahun Status') }}<code>*</code></label>
+                        <label>{{ __('Tahun Status') }}</label>
                         <input type="text" class="form-control @error('thnstatuskawin') is-invalid @enderror"
-                            name="thnstatuskawin" required>
+                            name="thnstatuskawin">
                         @error('thnstatuskawin')
                         <span class="text-danger" role="alert">
                             {{ $message }}
@@ -348,23 +348,23 @@
                         <label class="form-label">{{ __('Status Tempat Tinggal') }}<code>*</code></label>
                         <div class="selectgroup w-100" id="status">
                             <label class="selectgroup-item">
-                                <input type="radio" name="stts_tmpttgl" value="1" class="selectgroup-input" checked>
+                                <input type="radio" name="stts_tmpttgl" value="Hak Milik" class="selectgroup-input" checked>
                                 <span class="selectgroup-button">{{ __('Hak Milik') }}</span>
                             </label>
                             <label class="selectgroup-item">
-                                <input type="radio" name="stts_tmpttgl" value="2" class="selectgroup-input">
+                                <input type="radio" name="stts_tmpttgl" value="Kontrak" class="selectgroup-input">
                                 <span class="selectgroup-button">{{ __('Kontrak') }}</span>
                             </label>
                             <label class="selectgroup-item">
-                                <input type="radio" name="stts_tmpttgl" value="3" class="selectgroup-input" checked>
+                                <input type="radio" name="stts_tmpttgl" value="Menumpang Wali" class="selectgroup-input">
                                 <span class="selectgroup-button">{{ __('Menumpang Wali') }}</span>
                             </label>
                             <label class="selectgroup-item">
-                                <input type="radio" name="stts_tmpttgl" value="4" class="selectgroup-input">
+                                <input type="radio" name="stts_tmpttgl" value="Rumah Dinas" class="selectgroup-input">
                                 <span class="selectgroup-button">{{ __('Rumah Dinas') }}</span>
                             </label>
                             <label class="selectgroup-item">
-                                <input type="radio" name="stts_tmpttgl" value="5" class="selectgroup-input" checked>
+                                <input type="radio" name="stts_tmpttgl" value="Kos" class="selectgroup-input">
                                 <span class="selectgroup-button">{{ __('Kos') }}</span>
                             </label>
                         </div>
@@ -394,27 +394,27 @@
                         <label class="form-label">{{ __('Pendidikan Terakhir') }}<code>*</code></label>
                         <div class="selectgroup w-100" id="status">
                             <label class="selectgroup-item">
-                                <input type="radio" name="pend_terakhir" value="1" class="selectgroup-input" checked>
+                                <input type="radio" name="pend_terakhir" value="MI" class="selectgroup-input" checked>
                                 <span class="selectgroup-button">{{ __('MI') }}</span>
                             </label>
                             <label class="selectgroup-item">
-                                <input type="radio" name="pend_terakhir" value="2" class="selectgroup-input">
+                                <input type="radio" name="pend_terakhir" value="SD" class="selectgroup-input">
                                 <span class="selectgroup-button">{{ __('SD') }}</span>
                             </label>
                             <label class="selectgroup-item">
-                                <input type="radio" name="pend_terakhir" value="3" class="selectgroup-input" checked>
+                                <input type="radio" name="pend_terakhir" value="SLTP" class="selectgroup-input">
                                 <span class="selectgroup-button">{{ __('SLTP') }}</span>
                             </label>
                             <label class="selectgroup-item">
-                                <input type="radio" name="pend_terakhir" value="4" class="selectgroup-input">
+                                <input type="radio" name="pend_terakhir" value="SLTA" class="selectgroup-input">
                                 <span class="selectgroup-button">{{ __('SLTA') }}</span>
                             </label>
                             <label class="selectgroup-item">
-                                <input type="radio" name="pend_terakhir" value="5" class="selectgroup-input" checked>
+                                <input type="radio" name="pend_terakhir" value="D1 , D2" class="selectgroup-input">
                                 <span class="selectgroup-button">{{ __('D1 , D2') }}</span>
                             </label>
                             <label class="selectgroup-item">
-                                <input type="radio" name="pend_terakhir" value="6" class="selectgroup-input">
+                                <input type="radio" name="pend_terakhir" value="S1 , S2" class="selectgroup-input">
                                 <span class="selectgroup-button">{{ __('S1 , S2') }}</span>
                             </label>
                         </div>
@@ -470,23 +470,23 @@
                         <label class="form-label">{{ __('Jenis Permohonan') }}<code>*</code></label>
                         <div class="selectgroup w-100" id="status">
                             <label class="selectgroup-item">
-                                <input type="radio" name="jns_prmohn" value="1" class="selectgroup-input" checked>
+                                <input type="radio" name="jns_prmohn" value="Tabungan Sahabat Muslim" class="selectgroup-input" checked>
                                 <span class="selectgroup-button">{{ __('Tabungan Sahabat Muslim') }}</span>
                             </label>
                             <label class="selectgroup-item">
-                                <input type="radio" name="jns_prmohn" value="2" class="selectgroup-input">
+                                <input type="radio" name="jns_prmohn" value="Tabungan Idul Fitri" class="selectgroup-input">
                                 <span class="selectgroup-button">{{ __('Tabungan Idul Fitri') }}</span>
                             </label>
                             <label class="selectgroup-item">
-                                <input type="radio" name="jns_prmohn" value="3" class="selectgroup-input" checked>
+                                <input type="radio" name="jns_prmohn" value="Tabungan Qurban" class="selectgroup-input">
                                 <span class="selectgroup-button">{{ __('Tabungan Qurban') }}</span>
                             </label>
                             <label class="selectgroup-item">
-                                <input type="radio" name="jns_prmohn" value="4" class="selectgroup-input">
+                                <input type="radio" name="jns_prmohn" value="Tabungan Umroh" class="selectgroup-input">
                                 <span class="selectgroup-button">{{ __('Tabungan Umroh') }}</span>
                             </label>
                             <label class="selectgroup-item">
-                                <input type="radio" name="jns_prmohn" value="5" class="selectgroup-input" checked>
+                                <input type="radio" name="jns_prmohn" value="Tabungan Pendidikan" class="selectgroup-input">
                                 <span class="selectgroup-button">{{ __('Tabungan Pendidikan') }}</span>
                             </label>
                         </div>
@@ -516,15 +516,15 @@
                         <label class="form-label">{{ __('Per') }}<code>*</code></label>
                         <div class="selectgroup w-100" id="status">
                             <label class="selectgroup-item">
-                                <input type="radio" name="nom_tab_per" value="1" class="selectgroup-input" checked>
+                                <input type="radio" name="nom_tab_per" value="Per-Bulan" class="selectgroup-input" checked>
                                 <span class="selectgroup-button">{{ __('Per-Bulan') }}</span>
                             </label>
                             <label class="selectgroup-item">
-                                <input type="radio" name="nom_tab_per" value="2" class="selectgroup-input">
+                                <input type="radio" name="nom_tab_per" value="Per-Minggu" class="selectgroup-input">
                                 <span class="selectgroup-button">{{ __('Per-Minggu') }}</span>
                             </label>
                             <label class="selectgroup-item">
-                                <input type="radio" name="nom_tab_per" value="3" class="selectgroup-input" checked>
+                                <input type="radio" name="nom_tab_per" value="Per-Hari" class="selectgroup-input">
                                 <span class="selectgroup-button">{{ __('Per-Hari') }}</span>
                             </label>
                         </div>

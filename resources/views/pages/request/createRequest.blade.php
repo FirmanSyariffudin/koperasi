@@ -113,11 +113,11 @@
                                 <span class="selectgroup-button">{{ __('Nikah') }}</span>
                             </label>
                             <label class="selectgroup-item">
-                                <input type="radio" name="stts_kawin" value="1" class="selectgroup-input" checked>
+                                <input type="radio" name="stts_kawin" value="3" class="selectgroup-input">
                                 <span class="selectgroup-button">{{ __('Cerai Hidup') }}</span>
                             </label>
                             <label class="selectgroup-item">
-                                <input type="radio" name="stts_kawin" value="2" class="selectgroup-input">
+                                <input type="radio" name="stts_kawin" value="4" class="selectgroup-input">
                                 <span class="selectgroup-button">{{ __('Cerai Mati') }}</span>
                             </label>
                         </div>
@@ -318,15 +318,15 @@
                                 <span class="selectgroup-button">{{ __('Kontrak') }}</span>
                             </label>
                             <label class="selectgroup-item">
-                                <input type="radio" name="stts_rmhtgl" value="1" class="selectgroup-input" checked>
+                                <input type="radio" name="stts_rmhtgl" value="3" class="selectgroup-input">
                                 <span class="selectgroup-button">{{ __('Menumpang Wali') }}</span>
                             </label>
                             <label class="selectgroup-item">
-                                <input type="radio" name="stts_rmhtgl" value="2" class="selectgroup-input">
+                                <input type="radio" name="stts_rmhtgl" value="4" class="selectgroup-input">
                                 <span class="selectgroup-button">{{ __('Rumah Dinas') }}</span>
                             </label>
                             <label class="selectgroup-item">
-                                <input type="radio" name="stts_rmhtgl" value="1" class="selectgroup-input" checked>
+                                <input type="radio" name="stts_rmhtgl" value="5" class="selectgroup-input">
                                 <span class="selectgroup-button">{{ __('Kos') }}</span>
                             </label>
                         </div>
@@ -363,19 +363,19 @@
                                 <span class="selectgroup-button">{{ __('SD') }}</span>
                             </label>
                             <label class="selectgroup-item">
-                                <input type="radio" name="pend_trakhir" value="1" class="selectgroup-input" checked>
+                                <input type="radio" name="pend_trakhir" value="3" class="selectgroup-input">
                                 <span class="selectgroup-button">{{ __('SLTP') }}</span>
                             </label>
                             <label class="selectgroup-item">
-                                <input type="radio" name="pend_trakhir" value="2" class="selectgroup-input">
+                                <input type="radio" name="pend_trakhir" value="4" class="selectgroup-input">
                                 <span class="selectgroup-button">{{ __('SLTA') }}</span>
                             </label>
                             <label class="selectgroup-item">
-                                <input type="radio" name="pend_trakhir" value="1" class="selectgroup-input" checked>
+                                <input type="radio" name="pend_trakhir" value="5" class="selectgroup-input">
                                 <span class="selectgroup-button">{{ __('D1 , D2') }}</span>
                             </label>
                             <label class="selectgroup-item">
-                                <input type="radio" name="pend_trakhir" value="2" class="selectgroup-input">
+                                <input type="radio" name="pend_trakhir" value="6" class="selectgroup-input">
                                 <span class="selectgroup-button">{{ __('S1 , S2') }}</span>
                             </label>
                         </div>

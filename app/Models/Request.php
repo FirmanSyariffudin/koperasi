@@ -42,7 +42,6 @@ class Request extends Model
         'dom_kab',
         'dom_prov',
         'stts_rmhtgl',
-        'rmhtgl_lain',
         'pend_trakhir',
         'pend_lain',
         'pkerjaan',

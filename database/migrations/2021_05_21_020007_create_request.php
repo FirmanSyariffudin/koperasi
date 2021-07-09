@@ -22,7 +22,7 @@ class CreateRequest extends Migration
             $table->string('jns_klamin');
             $table->string('no_tlp');
             $table->string('no_orgdkt');
-            $table->enum('stts_kawin', ['Belum Nikah', 'Nikah', 'Cerai Hidup', 'Cerai Mati']);
+            $table->string('stts_kawin');
             $table->string('thn_kawin');
             $table->string('address');
             $table->string('rtrw');
@@ -37,10 +37,10 @@ class CreateRequest extends Migration
             $table->string('dom_kec');
             $table->string('dom_kab');
             $table->string('dom_prov');
-            $table->enum('stts_rmhtgl', ['Hak Milik', 'Kontrak', 'Menumpang Wali', 'Rumah Dinas', 'Kos'])->nullable();;
+            $table->string('stts_rmhtgl');
             $table->string('rmhtgl_lain');
             $table->string('pend_trakhir');
-            $table->string('pend_lain')->nullable();;
+            $table->string('pend_lain')->nullable();
             $table->string('pkerjaan');
             $table->string('prusahaan');
             $table->string('jabatan');
@@ -54,9 +54,9 @@ class CreateRequest extends Migration
             $table->string('jml_pngajuan');
             $table->string('terbilang');
             $table->string('jml_disetujui');
-            $table->string('jml_disetujui2')->nullable();;
-            $table->string('jml_disetujui3')->nullable();;
-            $table->string('jml_disetujui4')->nullable();;
+            $table->string('jml_disetujui2')->nullable();
+            $table->string('jml_disetujui3')->nullable();
+            $table->string('jml_disetujui4')->nullable();
             $table->longText('keperluan')->nullable();
             $table->string('jngka_wkt');
             $table->string('akad_pemb');

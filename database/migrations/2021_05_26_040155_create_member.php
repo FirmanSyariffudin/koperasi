@@ -26,7 +26,7 @@ class CreateMember extends Migration
             $table->string('ibukandung');
             $table->string('notlp');
             $table->enum('statuskawin', ['Belum Nikah', 'Nikah', 'Cerai Hidup', 'Cerai Mati']);
-            $table->string('thnstatuskawin');
+            $table->string('thnstatuskawin')->nullable();
             $table->string('address');
             $table->string('rtrw');
             $table->string('kel');
