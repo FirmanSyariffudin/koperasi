@@ -137,7 +137,7 @@ class RequestController extends Controller
                 'del' => 0
         ]);
 
-        Redirect::route('request.index');
+        return Redirect::route('request.index');
     }
 
     public function edit($id)

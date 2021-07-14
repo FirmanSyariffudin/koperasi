@@ -118,7 +118,7 @@ class MemberController extends Controller
             'info' => $req->info,
         ]);
 
-        Redirect::route('member.index');
+        return Redirect::route('member.index');
     }
 
     public function edit($id)

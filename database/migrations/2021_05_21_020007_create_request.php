@@ -38,7 +38,7 @@ class CreateRequest extends Migration
             $table->string('dom_kab');
             $table->string('dom_prov');
             $table->string('stts_rmhtgl');
-            $table->string('rmhtgl_lain');
+            $table->string('rmhtgl_lain')->nullable();
             $table->string('pend_trakhir');
             $table->string('pend_lain')->nullable();
             $table->string('pkerjaan');
