@@ -44,6 +44,7 @@ class MemberController extends Controller
         Validator::make($req->all(), [
             'code' => 'required',
             'name' => 'required',
+            'no_anggota' => 'required',
             'tlahir' => 'required',
             'tgllahir' => 'required|date',
             'jnsklmn' => 'required',
@@ -82,6 +83,7 @@ class MemberController extends Controller
         Member::create([
             'code' => $req->code,
             'name' => $req->name,
+            'no_anggota' => $req->no_anggota,
             'tlahir' => $req->tlahir,
             'tgllahir' => $req->tgllahir,
             'jnsklmn' => $req->jnsklmn,

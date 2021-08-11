@@ -20,6 +20,18 @@
             <div class="row">
                 <div class="col">
                     <div class="form-group">
+                        <label>{{ __('Nomor Anggota') }}<code>*</code></label>
+                        <input type="text" class="form-control @error('no_anggota') is-invalid @enderror" name="no_anggota" required
+                            autofocus>
+                        @error('no_anggota')
+                        <span class="text-danger" role="alert">
+                            {{ $message }}
+                        </span>
+                        @enderror
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
                         <label>{{ __('Nama Lengkap') }}<code>*</code></label>
                         <input type="text" class="form-control @error('name') is-invalid @enderror" name="name" required
                             autofocus>
@@ -42,6 +54,8 @@
                         @enderror
                     </div>
                 </div>
+            </div>
+            <div class="row">
                 <div class="col">
                     <div class="form-group">
                         <label>{{ __('Tanggal Lahir') }}<code>*</code></label>
@@ -54,8 +68,6 @@
                         @enderror
                     </div>
                 </div>
-            </div>
-            <div class="row">
                 <div class="col">
                     <div class="form-group">
                         <label class="form-label">{{ __('Jenis Kelamin') }}<code>*</code></label>

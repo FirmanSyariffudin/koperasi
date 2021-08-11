@@ -21,6 +21,7 @@ class Member extends Model
     protected $fillable = [
         'code',
         'name',
+        'no_anggota',
         'tlahir',
         'tgllahir',
         'jnsklmn',

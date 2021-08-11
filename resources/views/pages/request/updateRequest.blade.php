@@ -1,16 +1,16 @@
 @extends('layouts.default')
-@section('title', __('pages.title').__(' | Edit Permohonan'))
-@section('titleContent', __('Edit Permohonan'))
+@section('title', __('pages.title').__(' | Edit Pembiayaan'))
+@section('titleContent', __('Edit Pembiayaan'))
 @section('breadcrumb', __('Data'))
 @section('morebreadcrumb')
-<div class="breadcrumb-item active">{{ __('Permohonan') }}</div>
-<div class="breadcrumb-item active">{{ __('Edit Permohonan') }}</div>
+<div class="breadcrumb-item active">{{ __('Pembiayaan') }}</div>
+<div class="breadcrumb-item active">{{ __('Edit Pembiayaan') }}</div>
 @endsection
 
 @section('content')
 <h2 class="section-title">{{ $request->code }}</h2>
 <p class="section-lead">
-    {{ __('ID yang digunakan untuk mengidentifikasi setiap permohonan') }}
+    {{ __('ID yang digunakan untuk mengidentifikasi setiap Pembiayaan') }}
 </p>
 <div class="card">
     <form method="POST" action="{{ route('request.update',$request->id) }}">

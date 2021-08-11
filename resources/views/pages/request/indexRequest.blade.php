@@ -1,16 +1,16 @@
 @extends('layouts.default')
-@section('title', __('pages.title').__(' | Data Permohonan'))
-@section('titleContent', __('Permohonan'))
+@section('title', __('pages.title').__(' | Data Pembiayaan'))
+@section('titleContent', __('Pembiayaan'))
 @section('breadcrumb', __('Data'))
 @section('morebreadcrumb')
-<div class="breadcrumb-item active">{{ __('Permohonan') }}</div>
+<div class="breadcrumb-item active">{{ __('Pembiayaan') }}</div>
 @endsection
 
 @section('content')
 <div class="card mt-3">
     <div class="card-header">
         <a href="{{ route('request.create') }}" class="btn btn-icon icon-left btn-primary">
-            <i class="far fa-edit"></i>{{ __(' Tambah Permohonan') }}</a>
+            <i class="far fa-edit"></i>{{ __(' Tambah Pembiayaan') }}</a>
     </div>
     <div class="card-body">
         <table class="table-striped table" id="tables" width="100%">

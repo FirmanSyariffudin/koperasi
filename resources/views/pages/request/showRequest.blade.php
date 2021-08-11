@@ -1,5 +1,5 @@
 @extends('layouts.default')
-@section('title', __('pages.title').__(' | Lihat Permohonan'))
+@section('title', __('pages.title').__(' | Lihat Pembiayaan'))
 @section('headerBack')
 <div class="section-header-back">
     <a href="{{ route('request.index') }}" class="btn btn-icon">
@@ -7,17 +7,17 @@
     </a>
 </div>
 @endsection
-@section('titleContent', __('Lihat Permohonan'))
+@section('titleContent', __('Lihat Pembiayaan'))
 @section('breadcrumb', __('Data'))
 @section('morebreadcrumb')
-<div class="breadcrumb-item active">{{ __('Permohonan') }}</div>
-<div class="breadcrumb-item active">{{ __('Lihat Permohonan') }}</div>
+<div class="breadcrumb-item active">{{ __('Pembiayaan') }}</div>
+<div class="breadcrumb-item active">{{ __('Lihat Pembiayaan') }}</div>
 @endsection
 
 @section('content')
 <h2 class="section-title">{{ $request->code }}</h2>
 <p class="section-lead">
-    {{ __('ID yang digunakan untuk mengidentifikasi setiap permohonan') }}
+    {{ __('ID yang digunakan untuk mengidentifikasi setiap Pembiayaan') }}
 </p>
 <div class="card">
     <form method="POST" action="{{ route('request.store') }}">

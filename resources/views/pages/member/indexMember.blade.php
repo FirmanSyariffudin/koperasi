@@ -17,12 +17,12 @@
             <thead>
                 <tr>
                     <th class="text-center">
-                        {{ __('NO') }}
-                    </th>
-                    <th class="text-center">
-                        {{ __('Kode') }}
+                        {{ __('Urut') }}
                     </th>
                     <th>{{ __('Nama Anggota') }}</th>
+                    <th class="text-center">
+                        {{ __('Nomor Anggota') }}
+                    </th>
                     <th>{{ __('Jenis Permohonan') }}</th>
                     <th>{{ __('Nama Ibu Kandung') }}</th>
                     <th>{{ __('Alamat') }}</th>
@@ -36,11 +36,11 @@
                     <td class="text-center">
                         {{ $number+1 }}
                     </td>
-                    <td class="text-center">
-                        {{ $m->code }}
-                    </td>
                     <td>
                         {{ $m->name }}
+                    </td>
+                    <td class="text-center">
+                        {{ $m->no_anggota }}
                     </td>
                     <td>
                         <span class="badge badge-info">

@@ -32,6 +32,17 @@
                 </div>
                 <div class="col">
                     <div class="form-group">
+                        <label>{{ __('Nomor Anggota') }}<code>*</code></label>
+                        <input type="text" class="form-control @error('no_anggota') is-invalid @enderror" name="no_anggota" value="{{ $member->no_anggota }}" required>
+                        @error('no_anggota')
+                        <span class="text-danger" role="alert">
+                            {{ $message }}
+                        </span>
+                        @enderror
+                    </div>
+                </div>
+                <div class="col">
+                    <div class="form-group">
                         <label>{{ __('Tempat Lahir') }}<code>*</code></label>
                         <input type="text" class="form-control @error('tlahir') is-invalid @enderror" name="tlahir"
                         value="{{ $member->tlahir }}" required>

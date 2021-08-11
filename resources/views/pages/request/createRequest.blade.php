@@ -1,16 +1,16 @@
 @extends('layouts.default')
-@section('title', __('pages.title').__(' | Tambah Permohonan'))
-@section('titleContent', __('Tambah Permohonan'))
+@section('title', __('pages.title').__(' | Tambah Pembiayaan'))
+@section('titleContent', __('Tambah Pembiayaan'))
 @section('breadcrumb', __('Data'))
 @section('morebreadcrumb')
-<div class="breadcrumb-item active">{{ __('Permohonan Koperasi Syariah') }}</div>
-<div class="breadcrumb-item active">{{ __('Tambah Permohonan') }}</div>
+<div class="breadcrumb-item active">{{ __('Pembiayaan Koperasi Syariah') }}</div>
+<div class="breadcrumb-item active">{{ __('Tambah Pembiayaan') }}</div>
 @endsection
 
 @section('content')
 <h2 class="section-title">{{ $code }}</h2>
 <p class="section-lead">
-    {{ __('ID yang digunakan untuk mengidentifikasi setiap Permohonan') }}
+    {{ __('ID yang digunakan untuk mengidentifikasi setiap Pembiayaan') }}
 </p>
 <div class="card">
     <form method="POST" action="{{ route('request.store') }}">

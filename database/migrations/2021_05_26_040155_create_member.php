@@ -16,6 +16,7 @@ class CreateMember extends Migration
         Schema::create('member', function (Blueprint $table) {
             $table->id();
             $table->string('code');
+            $table->string('no_anggota');
             $table->string('name');
             $table->string('tlahir');
             $table->date('tgllahir');

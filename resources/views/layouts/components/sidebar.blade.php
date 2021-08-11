@@ -41,13 +41,16 @@
                                 Request::route()->getName() == 'request.deny' ? 'active' : ''))))) }}">
                 <a href="{{ route('request.index') }}" class="nav-link has-dropdown" data-toggle="dropdown">
                     <i class="fas fa-toolbox"></i>
-                    <span>{{ __('FORM PERMOHONAN') }}</span></a>
+                    <span>{{ __('FORM PEMBIAYAAN') }}</span></a>
                 <ul class="dropdown-menu">
                     <li class="{{ Request::route()->getName() == 'request.index' ? 'active' : '' }}">
-                        <a class="nav-link" href="{{ route('request.index') }}">{{ __('Daftar Permohonan') }}</a>
+                        <a class="nav-link" href="{{ route('request.index') }}">{{ __('Daftar Pembiayaan Pending') }}</a>
+                    </li>
+                    <li class="{{ Request::route()->getName() == 'request.index' ? 'active' : '' }}">
+                        <a class="nav-link" href="{{ route('request.index') }}">{{ __('Daftar Pembiayaan ACC') }}</a>
                     </li>
                     <li class="{{ Request::route()->getName() == 'request.create' ? 'active' : '' }}">
-                        <a class="nav-link" href="{{ route('request.create') }}">{{ __('Tambah Permohonan') }}</a>
+                        <a class="nav-link" href="{{ route('request.create') }}">{{ __('Tambah Pembiayaan') }}</a>
                     </li>
                 </ul>
             </li>
